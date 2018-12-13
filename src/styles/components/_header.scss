@@ -1,0 +1,33 @@
+.header {
+    background: $off-black;
+    color: white;
+    margin-bottom: $xl-size;
+    padding: $m-size 0;
+    height: 7rem;
+            
+    // h1 {
+    //     color: red; 
+    // }
+}
+//instead, BEM naming convenction  - block element modifier
+.header__title {
+    font-size: 3rem;
+    margin:0;
+    padding-left: 35%;
+}
+
+.header__subtitle {
+    color: $off-white;
+    font-size: $m-size;
+    font-weight: 500;
+    padding-left: 28%;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .header{
+        font-size: 1rem;
+        height: 18rem;
+        margin-bottom: $xl-size;
+        padding-right: 10rem;
+    }
+}

@@ -1,0 +1,13 @@
+// $brand-color: green;
+// * {
+//     color: $brand-color;
+// }
+@import'./base/settings.scss';
+@import './base/base';
+@import './components/add-option';
+@import './components/header';
+@import './components/container';
+@import './components/button';
+@import './components/option';
+@import './components/modal';
+@import './components/widget';
