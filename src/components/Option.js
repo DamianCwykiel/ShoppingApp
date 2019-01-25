@@ -9,8 +9,7 @@ import React from 'react';
           props.handleDeleteOption(props.optionText);
         }}
       >
-      
-          remove
+        remove
       </button>
   </div>
 );

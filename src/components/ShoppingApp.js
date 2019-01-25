@@ -11,27 +11,8 @@ export default class ShoppingApp extends React.Component {
       selectedOption: undefined
     };
 
-    // constructor(props){
-    //   super(props);
-    //     this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-    //     this.handlePick = this.handlePick.bind(this);
-    //     this.handleAddOption = this.handleAddOption.bind(this);
-    //     this.handleDeleteOption = this.handleDeleteOption.bind(this);
-    //     this.state = {
-    //       options: []
-    //     };
-    // }
-
     handleDeleteOptions = () => {
       this.setState(() => ({options: [] }));
-
-      //old longer option to decribe an above function
-        
-      // this.setState(()=>{
-      //   return{
-      //      options: []
-      //    };
-      // });  
     };
 
     handlerClearSelectedOption = () => {
@@ -61,15 +42,6 @@ export default class ShoppingApp extends React.Component {
       };
 
       this.setState((prevState) => ({ options: prevState.options.concat(option) }));
-        
-      //old longer option to decribe an above function
-
-      // this.setState((prevState) => {
-      //   return {
-      //     options: prevState.options.concat(option)
-      //   }
-        
-      // });
     };
 
     componentDidMount() {
@@ -98,9 +70,7 @@ export default class ShoppingApp extends React.Component {
     }
 
   render() {
-    //const title = 'Independion';
     const subtitle = 'Make your shopping list open everywhere!';
-    //const options = ['thing one', 'thing two', 'thisng tree'];
        return (
       <div>
         <Header subtitle={subtitle} />
