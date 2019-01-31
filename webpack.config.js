@@ -11,7 +11,7 @@ module.exports = (env) => {
     return {
         entry: './src/app.js', //we tell webpack where it should start//
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -44,7 +44,8 @@ module.exports = (env) => {
         ],
         devtool: isProduction ? 'source-map' : 'inline-source-map', //tracks and shows our bugs position
         devServer:{
-            contentBase: path.join(__dirname, 'public')
+            contentBase: path.join(__dirname, 'public'),
+            publicPath: '/dist/'
         }
     }
 };

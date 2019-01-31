@@ -8,5 +8,8 @@
 
 * clone the repository
 * run npm/yarn install
-* visit localhost:8080
-* ex.path(/desktop/shoppingApp/yarn run dev-server)
+* yarn start (yarn run start)
+* visit localhost:3000
+* ex.path(/desktop/shoppingApp/yarn start)
+
+* or visit - https://react-shopping-app.herokuapp.com

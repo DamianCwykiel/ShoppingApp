@@ -4,7 +4,7 @@ const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 const port =  process.env.PORT || 3000; //dynamic port for heroku//
 
-//path where server lifes
+//path where server lives
 app.use(express.static(publicPath));
 
 //reloading between pages//
@@ -13,5 +13,5 @@ app.use(express.static(publicPath));
 // });
 
 app.listen(port, () => {
-    console.log('server is live!')
+    console.log('server is life!')
 });
