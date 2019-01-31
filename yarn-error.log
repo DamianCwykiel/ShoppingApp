@@ -1,30 +1,30 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add normailze.css
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add extract-text-plugin
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\PROGRA~2\BORLAND\CBUILD~1\BIN;C:\PROGRA~2\BORLAND\CBUILD~1\PROJECTS\BPL;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X86;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X64;C:\PROGRAM FILES (X86)\SKYPE\PHONE\;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files (x86)\Brackets\command;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\Mr DC\AppData\Roaming\npm;C:\Users\Mr DC\AppData\Local\GitHubDesktop\bin;C:\Users\Mr DC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mr DC\AppData\Local\Yarn\bin
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\PROGRA~2\BORLAND\CBUILD~1\BIN;C:\PROGRA~2\BORLAND\CBUILD~1\PROJECTS\BPL;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X86;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X64;C:\PROGRAM FILES (X86)\SKYPE\PHONE\;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files (x86)\Brackets\command;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\Mr DC\AppData\Local\GitHubDesktop\bin;C:\Users\Mr DC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mr DC\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin;C:\Users\Mr DC\AppData\Roaming\npm
 
 Yarn version: 
   1.10.1
 
 Node version: 
-  8.11.3
+  11.7.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/normailze.css: Not found
+  Error: https://registry.yarnpkg.com/extract-text-plugin: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:60182:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:120166:22)
-      at emitTwo (events.js:126:13)
-      at Request.emit (events.js:214:7)
+      at Request.emit (events.js:188:13)
       at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:121138:10)
-      at emitOne (events.js:116:13)
-      at Request.emit (events.js:211:7)
+      at Request.emit (events.js:188:13)
       at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:121060:12)
-      at Object.onceWrapper (events.js:313:30)
-      at emitNone (events.js:111:20)
+      at Object.onceWrapper (events.js:276:13)
+      at IncomingMessage.emit (events.js:193:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at processTicksAndRejections (internal/process/next_tick.js:76:17)
 
 npm manifest: 
   {
@@ -35,7 +35,8 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "server": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server"
     },
     "dependencies": {
@@ -46,8 +47,10 @@ npm manifest:
       "babel-preset-env": "1.5.2",
       "babel-preset-react": "6.24.1",
       "css-loader": "0.28.4",
+      "dotenv": "^6.2.0",
       "live-server": "^1.2.0",
-      "node-sass": "4.5.3",
+      "node-sass": "^4.11.0",
+      "normalize.css": "8.0.1",
       "react": "16.4.2",
       "react-dom": "16.4.2",
       "react-modal": "2.2.2",
@@ -2012,6 +2015,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
     integrity sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==
   
+  dotenv@^6.2.0:
+    version "6.2.0"
+    resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
+    integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+  
   duplexer@^0.1.1, duplexer@~0.1.1:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -2664,7 +2672,7 @@ Lockfile:
       is-glob "^3.1.0"
       path-dirname "^1.0.0"
   
-  glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@~7.1.1:
+  glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.2, glob@~7.1.1:
     version "7.1.3"
     resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
     integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -3808,7 +3816,7 @@ Lockfile:
       dns-packet "^1.3.1"
       thunky "^1.0.2"
   
-  nan@^2.3.2, nan@^2.9.2:
+  nan@^2.10.0, nan@^2.9.2:
     version "2.11.1"
     resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
     integrity sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA==
@@ -3867,7 +3875,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
     integrity sha512-MmbQJ2MTESTjt3Gi/3yG1wGpIMhUfcIypUCGtTizFR9IiccFwxSpfp0vtIZlkFclEqERemxfnSdZEMR9VqqEFQ==
   
-  node-gyp@^3.3.1:
+  node-gyp@^3.8.0:
     version "3.8.0"
     resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.8.0.tgz#540304261c330e80d0d5edce253a68cb3964218c"
     integrity sha512-3g8lYefrRRzvGeSowdJKAKyks8oUpLEd/DyPV4eMhVlhJ0aNaZqIrNUIPuEWWTAoPqyFkfGrM67MC69baqn6vA==
@@ -3930,10 +3938,10 @@ Lockfile:
       semver "^5.3.0"
       tar "^4"
   
-  node-sass@4.5.3:
-    version "4.5.3"
-    resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
-    integrity sha1-0JydEXlkEjnRuX/8YjH9zsU+FWg=
+  node-sass@^4.11.0:
+    version "4.11.0"
+    resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.11.0.tgz#183faec398e9cbe93ba43362e2768ca988a6369a"
+    integrity sha512-bHUdHTphgQJZaF1LASx0kAviPH7sGlcyNhWade4eVIpFp6tsn7SV8xNMTbsQFpEV9VXpnwTTnNYlfsZXgGgmkA==
     dependencies:
       async-foreach "^0.1.3"
       chalk "^1.1.1"
@@ -3947,12 +3955,13 @@ Lockfile:
       lodash.mergewith "^4.6.0"
       meow "^3.7.0"
       mkdirp "^0.5.1"
-      nan "^2.3.2"
-      node-gyp "^3.3.1"
+      nan "^2.10.0"
+      node-gyp "^3.8.0"
       npmlog "^4.0.0"
-      request "^2.79.0"
-      sass-graph "^2.1.1"
+      request "^2.88.0"
+      sass-graph "^2.2.4"
       stdout-stream "^1.4.0"
+      "true-case-path" "^1.0.2"
   
   "nopt@2 || 3":
     version "3.0.6"
@@ -4000,6 +4009,11 @@ Lockfile:
       prepend-http "^1.0.0"
       query-string "^4.1.0"
       sort-keys "^1.0.0"
+  
+  normalize.css@8.0.1:
+    version "8.0.1"
+    resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+    integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
   
   npm-bundled@^1.0.1:
     version "1.0.5"
@@ -4983,7 +4997,7 @@ Lockfile:
     dependencies:
       is-finite "^1.0.0"
   
-  request@^2.79.0, request@^2.87.0:
+  request@^2.87.0, request@^2.88.0:
     version "2.88.0"
     resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
     integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
@@ -5073,7 +5087,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
     integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
   
-  sass-graph@^2.1.1:
+  sass-graph@^2.2.4:
     version "2.2.4"
     resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-2.2.4.tgz#13fbd63cd1caf0908b9fd93476ad43a51d1e0b49"
     integrity sha1-E/vWPNHK8JCLn9k0dq1DpR0eC0k=
@@ -5693,6 +5707,13 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
     integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
+  
+  "true-case-path@^1.0.2":
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-1.0.3.tgz#f813b5a8c86b40da59606722b144e3225799f47d"
+    integrity sha512-m6s2OdQe5wgpFMC+pAJ+q9djG82O2jcHPOI6RNg1yy9rCYR+WD6Nbpl32fDpfC56nirdRy+opFa/Vk7HYhqaew==
+    dependencies:
+      glob "^7.1.2"
   
   tty-browserify@0.0.0:
     version "0.0.0"
