@@ -14,7 +14,7 @@ const Options = (props) => (
       </div>
         {props.options.length === 0 && 
           <p className="widget__message">
-            Please, add some item to get started.
+            Add some item to get started
           </p>
         }
           
